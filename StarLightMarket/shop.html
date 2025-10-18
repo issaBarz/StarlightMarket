@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Market - Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25:wght@400&family=Jersey+10:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel = "shortcut icon" href="images/StarlightMarket_favicon.png">
+    <link rel = "icon" type="image/png" sizes="32x32" href="images/StarlightMarket_favicon.png">
+    <link rel = "apple-touch-icon" sizes="180x180" href="images/StarlightMarket_favicon.png">
+    <link rel = "icon" sizes="192x192" href="images/StarlightMarket_favicon.png">
+</head>
+<body>
+    <div class="page-container shop-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="nav-bg"></div>
+            
+            <!-- Logo -->
+            <a href="index.html"><div class="logo">
+                <div class="star-group"><img src="images/StarlightMarket_Logo.png" alt="Starlight Market Logo"></div>
+                <div class="logo-text">
+                    <p>Creative out of SPITE</p>
+                </div>
+            </div></a>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="shop.html" class="nav-link active">Shop</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <a href="cart.html">
+                    <img src="images/ShoppingCart.png">
+                </a>
+            </div>
+        </header>
+
+        <!-- Shop Content -->
+        <main class="shop-content">
+            <!-- Hidden checkboxes for cart state -->
+            <input type="checkbox" id="cart-product-1" class="cart-checkbox" />
+            <input type="checkbox" id="cart-product-2" class="cart-checkbox" />
+            <input type="checkbox" id="cart-product-3" class="cart-checkbox" />
+            <input type="checkbox" id="cart-product-4" class="cart-checkbox" />
+            <input type="checkbox" id="cart-product-5" class="cart-checkbox" />
+            <input type="checkbox" id="cart-product-6" class="cart-checkbox" />
+            <input type="checkbox" id="cart-product-7" class="cart-checkbox" />
+            <input type="checkbox" id="cart-product-8" class="cart-checkbox" />
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-product="1">
+                    <div class="product-image product-1"></div>
+                    <div class="product-info">
+                        <h3>Kris w/soul [Deltarune]</h3>
+                        <p class="artist">By BananaJacket_</p>
+                        <div class="product-footer">
+                            <span class="price">Php 60.00</span>
+                            <label for="cart-product-1" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-product="2">
+                    <div class="product-image product-2"></div>
+                    <div class="product-info">
+                        <h3>Susie Chibi</h3>
+                        <p class="artist">By BananaJacket_</p>
+                        <div class="product-footer">
+                            <span class="price">Php 50.00</span>
+                            <label for="cart-product-2" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-product="3">
+                    <div class="product-image product-3"></div>
+                    <div class="product-info">
+                        <h3>Hatsune Mito</h3>
+                        <p class="artist">By BananaJacket_</p>
+                        <div class="product-footer">
+                            <span class="price">Php 60.00</span>
+                            <label for="cart-product-3" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-product="4">
+                    <div class="product-image product-4"></div>
+                    <div class="product-info">
+                        <h3>Creativity</h3>
+                        <p class="artist">By BananaJacket_</p>
+                        <div class="product-footer">
+                            <span class="price">Php 70.00</span>
+                            <label for="cart-product-4" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-product="5">
+                    <div class="product-image product-5"></div>
+                    <div class="product-info">
+                        <h3>Ralsei [Deltarune]</h3>
+                        <p class="artist">By FinnieX</p>
+                        <div class="product-footer">
+                            <span class="price">Php 60.00</span>
+                            <label for="cart-product-5" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-product="6">
+                    <div class="product-image product-6"></div>
+                    <div class="product-info">
+                        <h3>Kris [Deltarune]</h3>
+                        <p class="artist">By FinnieX</p>
+                        <div class="product-footer">
+                            <span class="price">Php 65.00</span>
+                            <label for="cart-product-6" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-product="7">
+                    <div class="product-image product-7"></div>
+                    <div class="product-info">
+                        <h3>Susie [Deltarune]</h3>
+                        <p class="artist">By FinnieX</p>
+                        <div class="product-footer">
+                            <span class="price">Php 60.00</span>
+                            <label for="cart-product-7" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-product="8">
+                    <div class="product-image product-8"></div>
+                    <div class="product-info">
+                        <h3>Zoro [One Piece]</h3>
+                        <p class="artist">By FinnieX</p>
+                        <div class="product-footer">
+                            <span class="price">Php 70.00</span>
+                            <label for="cart-product-8" class="add-btn">
+                                <span class="add-text">+ ADD</span>
+                                <span class="added-text">✓ ADDED</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <div class="social-icon facebook">
+                            <img src="images/facebook.png">
+                        </div>
+                        <div class="social-icon instagram">
+                            <img src="images/instagram.png">
+                        </div>
+                        <div class="social-icon tiktok">
+                            <img src="images/tiktok.png">
+                        </div>
+                        <div class="social-icon tumblr">
+                            <img src="images/tumblr.png">
+                        </div>
+                    </div>
+
+                    <!-- Footer Navigation -->
+                    <nav class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="collections.html">Collections</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright 2025 || Created by Isabella Luisa Barcebal</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
