@@ -360,14 +360,8 @@ body {
 .see-more {
     font-family: 'Jersey 25', sans-serif;
     font-size: 50px;
-    text-shadow: 2px 0 #400088,
-   -2px 0 #400088,
-    0 2px #400088,
-    0 -2px #400088,
-    1px 1px #400088,
-   -1px -1px #400088,
-    1px -1px #400088,
-   -1px 1px #400088;
+    font: bold;
+    
 }
 .see-more a {
     color: #8c59fb;
@@ -383,7 +377,6 @@ body {
    -1px -1px #8c59fb,
     1px -1px #8c59fb,
    -1px 1px #8c59fb;
-   font-weight: bold;
 }
 
 /* About Page */
@@ -499,7 +492,7 @@ body {
 
 .product-card {
     background: linear-gradient(to bottom, #e3abf2, #ffffff 12.981%);
-    border: 6px solid #ffecbc;
+    border: 6px solid #ffc04c;
     border-radius: 10px;
     overflow: hidden;
     height: auto;
@@ -513,8 +506,8 @@ body {
     background-size: cover;
     background-position: center;
     background-color: black;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 /* Product Images */
@@ -736,7 +729,7 @@ body {
 
 /* Contact Page Styles */
 .contact-content {
-    margin-top: 204px;
+    margin-top: 150px;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -803,6 +796,22 @@ body {
     font-family: 'Jersey 10', sans-serif;
     font-size: 32px;
     color: #7800f9;
+}
+.contact-value a {
+    color: #7800f9;
+    text-decoration: none;
+}
+
+.contact-value a:hover {
+    color: #fff;
+    text-shadow: 3px 0 #7800f9,
+   -3px 0 #7800f9,
+    0 3px #7800f9,
+    0 -3px #7800f9,
+    2px 3px #7800f9,
+   -2px -2px #7800f9,
+    2px -2px #7800f9,
+   -2px 2px #7800f9;
 }
 
 .artist-section {
@@ -986,27 +995,61 @@ body {
     cursor: not-allowed;
 }
 
-/* CSS-Only Cart System */
-/* Hide all cart checkboxes */
+/*Cart System */
 .cart-checkbox {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 
-/* Add button text toggle */
+/* Default button state */
+.add-btn {
+    background: linear-gradient(to bottom, #d015ff, #8c59fb);
+    color: white;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+}
+
+
 .add-btn .added-text {
     display: none;
 }
+.add-btn .add-text {
+    display: inline;
+}
 
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="1"] .add-btn .add-text,
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="2"] .add-btn .add-text,
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="3"] .add-btn .add-text,
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="4"] .add-btn .add-text,
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="5"] .add-btn .add-text,
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="6"] .add-btn .add-text,
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="7"] .add-btn .add-text,
-.cart-checkbox:checked ~ .products-grid .product-card[data-product="8"] .add-btn .add-text {
+
+#cart-product-1:checked ~ .products-grid .product-card[data-product="1"] .add-btn,
+#cart-product-2:checked ~ .products-grid .product-card[data-product="2"] .add-btn,
+#cart-product-3:checked ~ .products-grid .product-card[data-product="3"] .add-btn,
+#cart-product-4:checked ~ .products-grid .product-card[data-product="4"] .add-btn,
+#cart-product-5:checked ~ .products-grid .product-card[data-product="5"] .add-btn,
+#cart-product-6:checked ~ .products-grid .product-card[data-product="6"] .add-btn,
+#cart-product-7:checked ~ .products-grid .product-card[data-product="7"] .add-btn,
+#cart-product-8:checked ~ .products-grid .product-card[data-product="8"] .add-btn {
+    background: linear-gradient(to bottom, #4ade80, #22c55e);
+    color: white;
+}
+
+/* Hide "+ADD" and show "✓ ADDED" only for selected product */
+#cart-product-1:checked ~ .products-grid .product-card[data-product="1"] .add-btn .add-text,
+#cart-product-2:checked ~ .products-grid .product-card[data-product="2"] .add-btn .add-text,
+#cart-product-3:checked ~ .products-grid .product-card[data-product="3"] .add-btn .add-text,
+#cart-product-4:checked ~ .products-grid .product-card[data-product="4"] .add-btn .add-text,
+#cart-product-5:checked ~ .products-grid .product-card[data-product="5"] .add-btn .add-text,
+#cart-product-6:checked ~ .products-grid .product-card[data-product="6"] .add-btn .add-text,
+#cart-product-7:checked ~ .products-grid .product-card[data-product="7"] .add-btn .add-text,
+#cart-product-8:checked ~ .products-grid .product-card[data-product="8"] .add-btn .add-text {
     display: none;
 }
 
@@ -1021,17 +1064,22 @@ body {
     display: inline;
 }
 
-/* Change button color when checked */
-#cart-product-1:checked ~ .products-grid .product-card[data-product="1"] .add-btn,
-#cart-product-2:checked ~ .products-grid .product-card[data-product="2"] .add-btn,
-#cart-product-3:checked ~ .products-grid .product-card[data-product="3"] .add-btn,
-#cart-product-4:checked ~ .products-grid .product-card[data-product="4"] .add-btn,
-#cart-product-5:checked ~ .products-grid .product-card[data-product="5"] .add-btn,
-#cart-product-6:checked ~ .products-grid .product-card[data-product="6"] .add-btn,
-#cart-product-7:checked ~ .products-grid .product-card[data-product="7"] .add-btn,
-#cart-product-8:checked ~ .products-grid .product-card[data-product="8"] .add-btn {
-    background: linear-gradient(to bottom, #4ade80, #22c55e);
+
+.cart-items-list {
+    display: none;
 }
+
+#cart-product-1:checked ~ .cart-items-list .cart-item[data-cart-item="1"],
+#cart-product-2:checked ~ .cart-items-list .cart-item[data-cart-item="2"],
+#cart-product-3:checked ~ .cart-items-list .cart-item[data-cart-item="3"],
+#cart-product-4:checked ~ .cart-items-list .cart-item[data-cart-item="4"],
+#cart-product-5:checked ~ .cart-items-list .cart-item[data-cart-item="5"],
+#cart-product-6:checked ~ .cart-items-list .cart-item[data-cart-item="6"],
+#cart-product-7:checked ~ .cart-items-list .cart-item[data-cart-item="7"],
+#cart-product-8:checked ~ .cart-items-list .cart-item[data-cart-item="8"] {
+    display: block;
+}
+
 
 /* Cart Items List Styles */
 .cart-items-list {
@@ -1532,7 +1580,7 @@ body {
     .contact-content,
     .cart-content {
         padding: 30px 20px;
-        margin-top: 160px;
+        margin-top: 130px;
     }
     
     .main-content {
