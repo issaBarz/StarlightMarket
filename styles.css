@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset, Body, Page Container */
 * {
     margin: 0;
     padding: 0;
@@ -340,6 +340,14 @@ body {
     font-family: 'Jersey 25', sans-serif;
     font-size: 50px;
     color: #400088;
+     text-shadow: 3px 0 #fff,
+   -3px 0 #fff,
+    0 3px #fff,
+    0 -3px #fff,
+    2px 3px #fff,
+   -2px -2px #fff,
+    2px -2px #fff,
+   -2px 2px #fff;
     margin-bottom: 12px;
 }
 
@@ -432,7 +440,7 @@ body {
 
 .welcome-image {
     height: 400px;
-    background-image: url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=400&fit=crop');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Penciling_on_Wacom_Cintiq_13HD_by_David_Revoy.jpg/1920px-Penciling_on_Wacom_Cintiq_13HD_by_David_Revoy.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -491,7 +499,6 @@ body {
 }
 
 .product-card {
-    background: linear-gradient(to bottom, #e3abf2, #ffffff 12.981%);
     border: 6px solid #ffc04c;
     border-radius: 10px;
     overflow: hidden;
@@ -510,15 +517,7 @@ body {
     border-top-right-radius: 5px;
 }
 
-/* Product Images */
 
-
-
-.product-4 { background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=382&h=388&fit=crop'); }
-.product-5 { background-image: url('https://images.unsplash.com/photo-1621870717520-c0fedd0dc095?w=382&h=388&fit=crop'); }
-.product-6 { background-image: url('https://images.unsplash.com/photo-1621870717008-86d1acd1d8f2?w=382&h=388&fit=crop'); }
-.product-7 { background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=382&h=388&fit=crop'); }
-.product-8 { background-image: url('https://images.unsplash.com/photo-1621870717529-3204346b8e0e?w=382&h=388&fit=crop'); }
 
 .product-info {
     padding: 20px;
@@ -526,6 +525,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #fff;
 }
 
 .product-info h3 {
@@ -575,12 +575,16 @@ body {
 .collections-hero {
     position: relative;
     margin-top: 125px;
+    margin-bottom: 1.5rem;
     height: 253px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
+
+
+
 
 .hero-image-collections {
     position: absolute;
@@ -626,7 +630,7 @@ body {
     margin-bottom: 20px;
 }
 
-.hero-subtitle {
+.hero-content-collections .hero-subtitle {
     font-family: 'Jersey 10', sans-serif;
     font-size: 50px;
     color: white;
@@ -634,8 +638,10 @@ body {
 }
 
 .collections-content {
-    padding: 100px 50px;
+    padding: 2rem 50px;
+    margin-top: 0
 }
+
 
 .collections-grid {
     display: flex;
@@ -1090,7 +1096,7 @@ body {
 }
 
 .cart-item {
-    display: none; /* Hidden by default */
+    display: none;
     background: white;
     border-radius: 10px;
     padding: 20px;
@@ -1288,7 +1294,7 @@ body {
 
 
 /* Tablet Styles (768px - 1024px) */
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1024px) {
     .header {
         height: 180px;
     }
@@ -1329,16 +1335,22 @@ body {
         height: 300px;
     }
     
-    .hero-title {
-        font-size: 64px;
-    }
-    
     .hero-content-collections .hero-title {
         font-size: 64px;
     }
     
-    .hero-subtitle {
+    
+    .hero-content-collections .hero-subtitle {
         font-size: 36px;
+    }
+    
+    .collections-hero {
+        margin-bottom: 1.5rem; 
+    }
+
+    .collections-content {
+        margin-top: 0; 
+        padding-top: 0.5rem; 
     }
     
     .btn-primary {
@@ -1543,19 +1555,14 @@ body {
         height: 250px;
     }
     
-    .hero-title {
-        font-size: 36px;
-        margin-bottom: 30px;
+    .hero-content-collections .hero-title {
+        font-size: 56px;
+        margin-bottom: 10px;
         text-shadow: 2px 2px #400088, -2px -2px #400088, 2px -2px #400088, -2px 2px #400088;
     }
     
-    .hero-content-collections {
-        font-size: 36px;
-        text-shadow: 2px 2px #400088, -2px -2px #400088, 2px -2px #400088, -2px 2px #400088;
-    }
-    
-    .hero-subtitle {
-        font-size: 24px;
+    .hero-content-collections .hero-subtitle {
+        font-size: 30px;
         text-shadow: 1px 1px #400088, -1px -1px #400088, 1px -1px #400088, -1px 2px #400088;
     }
     
@@ -1581,6 +1588,15 @@ body {
     .cart-content {
         padding: 30px 20px;
         margin-top: 130px;
+    }
+
+    .collections-hero {
+        margin-bottom: 1rem;
+    }
+
+    .collections-content {
+        margin-top: 0;
+        padding-top: 0.25rem;
     }
     
     .main-content {
@@ -1688,11 +1704,11 @@ body {
     }
     
     .product-card {
-        height: 400px;
+        height: 470px;
     }
     
     .product-image {
-        height: 250px;
+        height: 420px;
     }
     
     .product-info h3 {
