@@ -917,14 +917,14 @@ body {
     color: white;
     text-align: center;
     margin-bottom: 50px;
-    text-shadow: 3px 0 #ffc04c,
-   -3px 0 #ffc04c,
-    0 3px #ffc04c,
-    0 -3px #ffc04c,
-    2px 3px #ffc04c,
-   -2px -2px #ffc04c,
-    2px -2px #ffc04c,
-   -2px 2px #ffc04c;
+    text-shadow: 3px 0 #400088,
+   -3px 0 #400088,
+    0 3px #400088,
+    0 -3px #400088,
+    2px 3px #400088,
+   -2px -2px #400088,
+    2px -2px #400088,
+   -2px 2px #400088;
     
 }
 
@@ -1911,3 +1911,4 @@ body {
     }
 
 }
+
